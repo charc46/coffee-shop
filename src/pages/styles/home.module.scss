@@ -1,0 +1,154 @@
+@import '../../styles/config.scss';
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .7;
+}
+
+.banner {
+  position: relative;
+  .banner-content {
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    z-index: 2;
+    margin: 0;
+    color: $yellow;
+    font-family: $primary-font;
+  }
+
+  h1 {
+    font-family: $title-font;
+  }
+
+  a {
+    text-decoration: none;
+    color: $yellow;
+    padding: 5px 10px;
+    background-color: $black;
+    border-radius: 2px;
+  }
+}
+
+.specials {
+  background-color: $grey;
+  padding: 25px;
+
+  h2 {
+    color: $black;
+    font-family: $primary-font;
+    text-align: center;
+  }
+}
+
+.specials-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.special {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 2px solid $yellow;
+  border-radius: 5px;
+  color: $black;
+  font-family: $primary-font;
+
+  h3 {
+    text-align: center;
+    font-family: $title-font;
+  }
+}
+
+.location {
+  padding: 15px;
+  h2 {
+    text-align: center;
+    font-family: $title-font;
+    color: $black;
+  }
+}
+
+.location-content {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.map {
+  width: 60%;
+  margin: 0 25px;
+  height: 600px;
+}
+
+.times {
+  width: 40%;
+  margin: 0 15px;
+  font-family: $primary-font;
+  color: $black;
+}
+
+@media(max-width: 700px) {
+  .hero {
+    height: 250px;
+  }
+  .banner {
+    h1 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: .9rem;
+    }
+
+    .banner-content {
+      top: 20%;
+      left: 20px;
+    }
+  }
+
+  .specials-container {
+    flex-direction: column;
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .special {
+    width: 100%;
+    margin: 10px 0;
+    height: fit-content;
+    font-size: .8rem;
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .location-content {
+    flex-direction: column;
+  }
+
+  .map {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height: 200px;
+  }
+
+  .times {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+}

@@ -1,0 +1,12 @@
+@import '../../styles/config.scss';
+
+.footer {
+  height: 100px;
+  background-color: $grey;
+  font-family: $primary-font;
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px;
+}

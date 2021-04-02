@@ -1,0 +1,93 @@
+@import '../../styles/config.scss';
+
+.root {
+  flex-grow: 1;
+}
+
+.menu-button {
+  margin-right: 10px;
+}
+
+.menu-icon  {
+  color: $yellow;
+  visibility: hidden;
+}
+
+.title {
+  font-family: $title-font;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: $yellow;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.header-nav {
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 25px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: $black;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background-color: $grey;
+  transition: all .2s;
+  font-family: $primary-font;
+
+  &:hover {
+    background-color: $yellow;
+    color: $black;
+  }
+}
+
+.nav {
+  background-color: $grey;
+}
+
+.dropdown-menu {
+  ul {
+    background-color: $grey;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+    font-family: $primary-font;
+  }
+}
+
+@media(max-width: 700px) {
+  .menu-icon {
+    visibility: visible;
+  }
+
+  .title {
+    flex-grow: 1;
+  }
+
+  .header-nav {
+    visibility: hidden;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+
+    div {
+      width: 100%;
+      ul {
+        width: 100%;
+        li {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
