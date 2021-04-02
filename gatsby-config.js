@@ -17,6 +17,13 @@ module.exports = {
     'gatsby-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    'gatsby-plugin-image'
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    }
   ],
 }
